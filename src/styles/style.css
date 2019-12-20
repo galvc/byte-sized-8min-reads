@@ -1,0 +1,38 @@
+@tailwind base;
+
+@font-face {
+    font-family: 'Noto Serif';
+    src: url(https://fonts.googleapis.com/css?family=Noto+Serif:400,700&display=swap);
+}
+
+h1 {
+    @apply text-4xl;
+}
+
+h2 {
+    @apply text-3xl;
+}
+
+a, a:visited {
+    @apply text-indigo-700;
+}
+
+a:hover {
+    @apply underline;
+}
+
+@tailwind components;
+
+@tailwind utilities;
+
+
+
+.post-title {
+    @apply text-3xl;
+    @apply font-semibold;
+    font-family: 'Noto Serif';
+}
+
+.post-preview {
+    @apply my-3;
+}

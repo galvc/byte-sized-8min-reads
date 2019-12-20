@@ -1,0 +1,11 @@
+vscode:
+  extensions:
+    - esbenp.prettier-vscode@2.3.0:1F0Pvb/ORZ/T+b60LIMs8w==
+# Command to start on workspace startup (optional)
+tasks:
+  - init: npm install -g gatsby-cli
+  - command: npm install -g gatsby-cli
+# Ports to expose on workspace startup (optional)
+ports:
+  - port: 8000
+    onOpen: open-preview
