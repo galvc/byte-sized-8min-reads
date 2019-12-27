@@ -25,24 +25,20 @@ export default ({ data }) => {
 }
 export const query = graphql`
   query {
-     allMarkdownRemark{
-        edges {
-            node {
-                excerpt
-                timeToRead
-                    wordCount {
-                        words
-                    }
-                frontmatter {
-                    date
-                    title
-                }
-
-                fields {
-                    slug
-                }
+  allMarkdownRemark(sort: {fields: frontmatter___date, order: DESC}) {
+    edges {
+      node {
+        excerpt
+        frontmatter {
+          title
+          date
         }
+        fields {
+          slug
+        }
+      }
     }
   }
-  }
+}
+
 `

@@ -17,7 +17,7 @@ export default ({ data, pageContext }) => {
 
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
       </div>
-
+      <span>hello</span>
       <div className="flex mb-4 justify-between items-center border-t">
         {prev && <Link to={prev.fields.slug}><div className="w-1/5 text-left text-sm p-2 uppercase">Previous</div></Link>}
         {next && <Link to={next.fields.slug}><div className="w-1/5 text-right text-sm p-2 uppercase">Next</div></Link>}

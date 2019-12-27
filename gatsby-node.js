@@ -55,8 +55,10 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         component: postTemplate,
         context: {
             slug: node.fields.slug,
-            prev: index === 0 ? null : posts[index - 1].node,
-            next: index === (posts.length - 1) ? null : posts[index + 1].node,
+            // prev: index === 0 ? null : posts[index - 1].node,
+            // next: index === (posts.length - 1) ? null : posts[index + 1].node,
+            prev: posts.previous,
+            next: posts.next
         },
     })
   })

@@ -17,7 +17,7 @@ export default () => (
                 <Link to="/" className="text-black">
                     <h1 className="text-lg uppercase font-bold pt-3">{data.site.siteMetadata.title}</h1>
                 </Link>
-                <aside className="text-sm text-gray-700">8min or less blog posts</aside>
+                <aside className="text-sm text-gray-700">webdev-flavored blog. 8min or under reading time.</aside>
             </span>
         )}
     />
