@@ -1,36 +1,27 @@
 import React from "react"
 // import PropTypes from "prop-types"
-
-// Utilities
 import kebabCase from "lodash/kebabCase"
-
-// Components
 // import { Helmet } from "react-helmet"
 import { Link, graphql } from "gatsby"
+import Layout from "../layout/layout"
 
 const TagsPage = ({
   data: {
     allMarkdownRemark: { group },
-    site: {
-      siteMetadata: { title },
-    },
   },
 }) => (
-  <div>
-    <h1>{title}</h1>
-    <div>
+  <Layout>
       <h1>Tags</h1>
       <ul>
         {group.map(tag => (
           <li key={tag.fieldValue}>
             <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
-              {tag.fieldValue} ({tag.totalCount})
+              {tag.fieldValue} ({tag.totalCount} posts)
             </Link>
           </li>
         ))}
       </ul>
-    </div>
-  </div>
+  </Layout>
 )
 
 // TagsPage.propTypes = {
