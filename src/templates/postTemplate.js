@@ -2,10 +2,10 @@ import React from "react"
 import { graphql, Link } from "gatsby"
 import Layout from "../layout/layout"
 
+
 export default ({ data, pageContext }) => {
   const post = data.markdownRemark
   const { next, prev } = pageContext
-
   return (
     <Layout>
       <div className="my-3">
@@ -17,12 +17,21 @@ export default ({ data, pageContext }) => {
 
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
       </div>
-      <span>hello</span>
-      <div className="flex mb-4 justify-between items-center border-t">
-        {prev && <Link to={prev.fields.slug}><div className="w-1/5 text-left text-sm p-2 uppercase">Previous</div></Link>}
-        {next && <Link to={next.fields.slug}><div className="w-1/5 text-right text-sm p-2 uppercase">Next</div></Link>}
-      </div>
+      <div className="flex flex-wrap border-t">
+        {prev && <div className="flex-1 h-20 text-left text-sm">
+            <Link to={prev.fields.slug}>
+            ← Previous 
+            <br />
+            <span className="font-medium">"{prev.frontmatter.title}"</span>
+        </Link></div>}
 
+        {next && <div className="flex-1 h-20 text-right text-sm">
+            <Link to={next.fields.slug}>
+            Next →
+            <br />
+            <span className="font-medium">"{next.frontmatter.title}"</span>
+        </Link></div>}
+    </div>
     </Layout>
   )
 }

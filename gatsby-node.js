@@ -21,7 +21,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   const tagTemplate = path.resolve("src/templates/tagTemplate.js")
   const result = await graphql(`
     query {
-      postsRemark: allMarkdownRemark(sort: {order: DESC, fields: frontmatter___date}) {
+      postsRemark: allMarkdownRemark(sort: {order: ASC, fields: frontmatter___date}) {
         edges {
           node {
             fields {
@@ -55,10 +55,8 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         component: postTemplate,
         context: {
             slug: node.fields.slug,
-            // prev: index === 0 ? null : posts[index - 1].node,
-            // next: index === (posts.length - 1) ? null : posts[index + 1].node,
-            prev: posts.previous,
-            next: posts.next
+            prev: index === 0 ? null : posts[index - 1].node,
+            next: index === (posts.length - 1) ? null : posts[index + 1].node,
         },
     })
   })
