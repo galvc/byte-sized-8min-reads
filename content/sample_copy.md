@@ -9,3 +9,8 @@ Pandas are really sweet.
 
 Here's a video of a panda eating sweets.
 
+```javascript
+var s = "JavaScript syntax highlighting";
+alert(s);
+```
+
