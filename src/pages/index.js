@@ -16,7 +16,6 @@ export default ({ data }) => (<Layout>
                         </h1>
                     </Link>
                         <p>{node.excerpt}</p>
-
                 </div>
         ))}
 </Layout>)
@@ -34,6 +33,7 @@ export const query = graphql`
         fields {
           slug
         }
+        id
       }
     }
   }
