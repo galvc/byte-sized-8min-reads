@@ -9,8 +9,9 @@ const ListLink = (props) => (
 export default () => (
     <div>
         <ul>
-            <ListLink to="">About</ListLink>
+            <ListLink to="/about">About</ListLink>
             <ListLink to="/tags">Tags</ListLink>
+            <ListLink to="/resources">Resources</ListLink>
         </ul>
     </div>
 )

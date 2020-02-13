@@ -3,8 +3,8 @@ import Layout from "../layout/layout"
 import Welcome from "../components/welcome"
 import { graphql, Link } from "gatsby"
 
-export default ({ data }) => (<Layout>
-   <Welcome />
+export default ({ data }) => (
+<Layout>
            {data.allMarkdownRemark.edges.map(({ node }) => (
                 <div key={node.id} className="post-preview">
                     <Link to={node.fields.slug}>

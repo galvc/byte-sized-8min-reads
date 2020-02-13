@@ -10,6 +10,8 @@ This blog is being developed as an mvp
 + Link to my portfolio
 + move away from tailwind to custom css later
 + responsiveness
+- [x] add primsjs
+- [ ] add resources page
 
 ## Future features
 + Search function
