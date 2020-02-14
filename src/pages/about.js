@@ -1,8 +1,7 @@
 import React from "react"
 import Layout from "../layout/layout"
 
-// this page is currently not being used
-
+s
 export default ({ data }) => {
   return (
     <Layout>
