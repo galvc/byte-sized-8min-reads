@@ -9,7 +9,7 @@ export default ({ data, pageContext }) => {
   return (
     <Layout>
       <div className="my-3">
-        <h1 className="post-title">{post.frontmatter.title}</h1>
+        <h1>{post.frontmatter.title}</h1>
         <div className="mb-5 text-gray-700 text-sm">
             <p>{post.frontmatter.date}</p>
             <p>{post.timeToRead} min of reading</p>
