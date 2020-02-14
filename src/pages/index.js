@@ -5,7 +5,7 @@ import { graphql, Link } from "gatsby"
 
 export default ({ data }) => (
 <Layout>
-           {data.allMarkdownRemark.edges.map(({ node }) => (
+               {data.allMarkdownRemark.edges.map(({ node }) => (
                 <div key={node.id} className="post-preview">
                     <Link to={node.fields.slug}>
                         <h1 className="post-title hover:underline hover:text-black">
