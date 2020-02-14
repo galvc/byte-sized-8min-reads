@@ -1,7 +1,6 @@
 import React from "react"
 import Layout from "../layout/layout"
 
-s
 export default ({ data }) => {
   return (
     <Layout>
